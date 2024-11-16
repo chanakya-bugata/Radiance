@@ -59,10 +59,10 @@ var articles = [
     ]
 
 
-var recommendedProducts = [
+var allProducts = [
     Product(name: "The Derm Co Sunscreen SPF 50", type: "Sunscreen SPF 50", cost: "INR 15", rating: 4.5, imageName: "sunscreen"),
-    Product(name: "Deconstruct Serum", type: "Hydrating Serum", cost: "INR 25", rating: 4.8, imageName: "serum 1"),
-    Product(name: "Cetaphil Moisturizing Cream", type: "Moisturizing Cream", cost: "INR 20", rating: 4.2, imageName: "moisturizer")
+    Product(name: "Deconstruct Serum", type: "Serum", cost: "INR 25", rating: 4.8, imageName: "serum 1"),
+    Product(name: "Cetaphil Moisturizing Cream", type: "Cream", cost: "INR 20", rating: 4.2, imageName: "moisturizer")
 ]
 
 

@@ -21,6 +21,10 @@ class CleanProductCell: UICollectionViewCell {
     
     @IBOutlet weak var ratingLabel: UILabel!
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    
+    
     func configure(with product: Product) {
         productImageView.image = UIImage(named: product.imageName)
         productNameLabel.text = product.name

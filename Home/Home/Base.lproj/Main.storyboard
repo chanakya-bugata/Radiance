@@ -478,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnP-aV-KgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014.5038167938931" y="-89.436619718309871"/>
+            <point key="canvasLocation" x="1924" y="-89"/>
         </scene>
         <!--Category Cell View Controller-->
         <scene sceneID="ZBq-rz-OYb">
@@ -532,8 +532,8 @@
                                                                                 <constraint firstAttribute="width" constant="180" id="yF7-RF-daz"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phs-Ez-0La">
-                                                                            <rect key="frame" x="8" y="196" width="180" height="25.333333333333314"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phs-Ez-0La">
+                                                                            <rect key="frame" x="8" y="196" width="180" height="19.333333333333343"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                                             <color key="textColor" red="0.2470588088" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
@@ -556,17 +556,31 @@
                                                                             <color key="textColor" red="0.53660131160000002" green="0.53660131160000002" blue="0.53660131160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKp-ML-5Yc">
+                                                                            <rect key="frame" x="134" y="8" width="51" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="51" id="NUH-4Y-Yb1"/>
+                                                                                <constraint firstAttribute="height" constant="35" id="y3D-BJ-Gl1"/>
+                                                                            </constraints>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="">
+                                                                                <color key="baseForegroundColor" red="0.89411771299999998" green="0.57254904510000004" blue="0.53725492949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </buttonConfiguration>
+                                                                        </button>
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstItem="tUG-fm-VAN" firstAttribute="top" secondItem="UzQ-U7-5hF" secondAttribute="bottom" constant="8" id="2Vf-O5-UQI"/>
                                                                         <constraint firstItem="Pas-xn-reN" firstAttribute="top" secondItem="qN1-tW-Co4" secondAttribute="top" id="4LZ-Qr-6FX"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="jKp-ML-5Yc" secondAttribute="trailing" constant="11" id="7vI-42-amF"/>
                                                                         <constraint firstItem="cN0-eN-5lN" firstAttribute="top" secondItem="tUG-fm-VAN" secondAttribute="bottom" constant="8" symbolic="YES" id="CBw-i2-dgj"/>
+                                                                        <constraint firstItem="jKp-ML-5Yc" firstAttribute="leading" secondItem="qN1-tW-Co4" secondAttribute="leading" constant="134" id="CkL-mL-EJi"/>
                                                                         <constraint firstItem="Pas-xn-reN" firstAttribute="leading" secondItem="qN1-tW-Co4" secondAttribute="leading" constant="8" id="Dlh-PZ-k87"/>
                                                                         <constraint firstAttribute="bottom" secondItem="Pas-xn-reN" secondAttribute="bottom" constant="208" id="FSz-8U-Jil"/>
                                                                         <constraint firstAttribute="trailing" secondItem="phs-Ez-0La" secondAttribute="trailing" constant="8" id="JRY-JT-ypf"/>
                                                                         <constraint firstAttribute="trailing" secondItem="cN0-eN-5lN" secondAttribute="trailing" constant="8" id="Jmq-uL-3pW"/>
                                                                         <constraint firstItem="UzQ-U7-5hF" firstAttribute="top" secondItem="phs-Ez-0La" secondAttribute="bottom" constant="12.666666666666686" id="MpH-Yx-bMq"/>
                                                                         <constraint firstItem="UzQ-U7-5hF" firstAttribute="leading" secondItem="qN1-tW-Co4" secondAttribute="leading" constant="8" id="Mvl-p7-jtq"/>
+                                                                        <constraint firstItem="jKp-ML-5Yc" firstAttribute="top" secondItem="qN1-tW-Co4" secondAttribute="top" constant="8" id="S99-CU-jzz"/>
                                                                         <constraint firstItem="tUG-fm-VAN" firstAttribute="leading" secondItem="qN1-tW-Co4" secondAttribute="leading" constant="8" id="cDT-mc-rgl"/>
                                                                         <constraint firstItem="cN0-eN-5lN" firstAttribute="top" secondItem="tUG-fm-VAN" secondAttribute="bottom" constant="8" symbolic="YES" id="cfz-iT-S8G"/>
                                                                         <constraint firstItem="phs-Ez-0La" firstAttribute="top" secondItem="Pas-xn-reN" secondAttribute="bottom" constant="16" id="dyJ-D3-CvJ"/>
@@ -575,11 +589,13 @@
                                                                         <constraint firstItem="phs-Ez-0La" firstAttribute="leading" secondItem="qN1-tW-Co4" secondAttribute="leading" constant="8" id="ibQ-Ak-Leh"/>
                                                                         <constraint firstAttribute="trailing" secondItem="tUG-fm-VAN" secondAttribute="trailing" constant="8" id="kVM-VL-0qO"/>
                                                                         <constraint firstItem="cN0-eN-5lN" firstAttribute="leading" secondItem="qN1-tW-Co4" secondAttribute="leading" constant="8" id="ku6-De-7FU"/>
+                                                                        <constraint firstItem="phs-Ez-0La" firstAttribute="top" secondItem="jKp-ML-5Yc" secondAttribute="bottom" constant="153" id="sfG-NY-kTk"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <size key="customSize" width="196" height="388"/>
                                                                 <connections>
                                                                     <outlet property="costLabel" destination="tUG-fm-VAN" id="jlt-vp-Ciw"/>
+                                                                    <outlet property="favoriteButton" destination="jKp-ML-5Yc" id="OqZ-cr-CTC"/>
                                                                     <outlet property="productImageView" destination="Pas-xn-reN" id="I7x-1V-qtA"/>
                                                                     <outlet property="productNameLabel" destination="phs-Ez-0La" id="grG-ll-857"/>
                                                                     <outlet property="productTypeLabel" destination="UzQ-U7-5hF" id="qsb-jB-Ux2"/>
@@ -589,7 +605,7 @@
                                                         </cells>
                                                     </collectionView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPC-T4-PXg">
-                                                        <rect key="frame" x="24" y="469" width="174.33333333333334" height="28.666666666666686"/>
+                                                        <rect key="frame" x="24" y="472" width="174.33333333333334" height="28.666666666666686"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="28.670000000000002" id="Qfi-bu-eSV"/>
                                                             <constraint firstAttribute="width" constant="174.33000000000001" id="V4d-Jb-eKW"/>
@@ -650,14 +666,29 @@
                                                                             <color key="textColor" red="0.53660131160000002" green="0.53660131160000002" blue="0.53660131160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEy-3C-duD">
+                                                                            <rect key="frame" x="134" y="8" width="51" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="35" id="6LE-g8-Ai3"/>
+                                                                                <constraint firstAttribute="width" constant="51" id="m0L-Ba-bra"/>
+                                                                            </constraints>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="">
+                                                                                <color key="baseForegroundColor" red="0.8078432083" green="0.5176470876" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </buttonConfiguration>
+                                                                        </button>
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstAttribute="bottom" secondItem="bOg-fs-OfL" secondAttribute="bottom" constant="208" id="3G4-0g-5DN"/>
+                                                                        <constraint firstItem="XEy-3C-duD" firstAttribute="top" secondItem="4e2-uz-CVz" secondAttribute="top" constant="8" id="3Gc-Ll-Iea"/>
                                                                         <constraint firstItem="Pb7-SK-Iq0" firstAttribute="leading" secondItem="4e2-uz-CVz" secondAttribute="leading" constant="8" id="5aX-n9-DCw"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="XEy-3C-duD" secondAttribute="trailing" constant="11" id="948-Dd-PCR"/>
                                                                         <constraint firstAttribute="trailing" secondItem="Pb7-SK-Iq0" secondAttribute="trailing" constant="8" id="B4J-sf-Bpx"/>
                                                                         <constraint firstAttribute="trailing" secondItem="9VI-zU-K7L" secondAttribute="trailing" constant="8" id="EZP-Vt-ug3"/>
+                                                                        <constraint firstItem="Pb7-SK-Iq0" firstAttribute="top" secondItem="XEy-3C-duD" secondAttribute="bottom" constant="153" id="HA0-FK-5ho"/>
                                                                         <constraint firstItem="h7S-Mh-qqg" firstAttribute="leading" secondItem="4e2-uz-CVz" secondAttribute="leading" constant="8" id="Meu-KI-jui"/>
                                                                         <constraint firstItem="jbc-mS-pSN" firstAttribute="top" secondItem="9VI-zU-K7L" secondAttribute="bottom" constant="16.329999999999998" id="Mlw-3j-Zj0"/>
+                                                                        <constraint firstItem="XEy-3C-duD" firstAttribute="leading" secondItem="4e2-uz-CVz" secondAttribute="leading" constant="134" id="PgI-2I-Hap"/>
                                                                         <constraint firstAttribute="trailing" secondItem="h7S-Mh-qqg" secondAttribute="trailing" constant="8" id="PvV-it-azb"/>
                                                                         <constraint firstAttribute="trailing" secondItem="jbc-mS-pSN" secondAttribute="trailing" constant="8" id="U95-3Y-rmj"/>
                                                                         <constraint firstItem="bOg-fs-OfL" firstAttribute="leading" secondItem="4e2-uz-CVz" secondAttribute="leading" constant="8" id="Unb-zp-Duc"/>
@@ -673,6 +704,7 @@
                                                                 <size key="customSize" width="196" height="388"/>
                                                                 <connections>
                                                                     <outlet property="costLabel" destination="9VI-zU-K7L" id="Xv7-sS-ZGC"/>
+                                                                    <outlet property="favoriteButton" destination="XEy-3C-duD" id="TND-aK-69Y"/>
                                                                     <outlet property="productImageView" destination="bOg-fs-OfL" id="QON-fU-mAS"/>
                                                                     <outlet property="productNameLabel" destination="Pb7-SK-Iq0" id="6eX-47-gA5"/>
                                                                     <outlet property="productTypeLabel" destination="h7S-Mh-qqg" id="sBR-fc-Iad"/>
@@ -684,7 +716,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.92549020049999997" green="0.92549020049999997" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstItem="kbs-Qx-EPA" firstAttribute="top" secondItem="oPC-T4-PXg" secondAttribute="bottom" constant="31.329999999999998" id="0Gq-ut-GeR"/>
+                                                    <constraint firstItem="kbs-Qx-EPA" firstAttribute="top" secondItem="oPC-T4-PXg" secondAttribute="bottom" constant="28.333333333333314" id="0Gq-ut-GeR"/>
                                                     <constraint firstItem="Z83-56-zAp" firstAttribute="leading" secondItem="k5Y-Nb-5zC" secondAttribute="leading" constant="24" id="4O6-Dw-nGQ"/>
                                                     <constraint firstItem="oPC-T4-PXg" firstAttribute="leading" secondItem="k5Y-Nb-5zC" secondAttribute="leading" constant="24" id="8a0-zG-Riu"/>
                                                     <constraint firstItem="kbs-Qx-EPA" firstAttribute="leading" secondItem="k5Y-Nb-5zC" secondAttribute="leading" constant="24" id="99z-Ir-VWG"/>
@@ -1011,6 +1043,7 @@
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="camera.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
