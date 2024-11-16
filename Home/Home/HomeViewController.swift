@@ -65,6 +65,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             if collectionView == categoriesCollectionView {
                 // Navigate to a new screen for the selected category
+                let selectedCategory = categories[indexPath.item]
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if let recommendedVC = storyboard.instantiateViewController(withIdentifier: "CategoryCellViewController") as? CategoryCellViewController {
+                    recommendedVC.categoryTitle = selectedCategory.title
+                    navigationController?.pushViewController(recommendedVC, animated: true)
+                }
             } else if collectionView == skinInsightsCollectionView {
                 // Navigate to a new screen for the selected skin insight
                 let selectedInsight = skinInsights[indexPath.item]
