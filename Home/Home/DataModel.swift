@@ -120,18 +120,18 @@ var allProducts = [
     ),
     Product(
         name: "Deconstruct Serum",
-        type: "Serum",
+        type: "Vitamin-C Serum",
         itemType: "Serum",
         cost: "INR 25",
         rating: 4.8,
-        imageName: "serum 1",
+        imageName: "serum2",
         ingredients: [Ingredient1,Ingredient2,Ingredient3,Ingredient4],
         benefits: "Good Benifits",
         numberOfReviews: 200
     ),
     Product(
         name: "Cetaphil Moisturizing Cream",
-        type: "Cream",
+        type: "Moisturizing Cream",
         itemType: "Cream",
         cost: "INR 20",
         rating: 4.2,
