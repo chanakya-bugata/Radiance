@@ -48,6 +48,20 @@ class ProductDetailViewController: UIViewController {
     }
     
     
+    
+    @IBAction func showIngredientList(_ sender: UIButton) {
+        guard let ingredients = product?.ingredients else { return }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let ingredientsVC = storyboard.instantiateViewController(withIdentifier: "IngredientListViewController") as? IngredientListViewController {
+            ingredientsVC.ingredients = ingredients
+            navigationController?.pushViewController(ingredientsVC, animated: true)
+        }else {
+            print("Error: Unable to instantiate IngredientListViewController")
+        }
+        
+    }
+    
+    
     func updateUI(with product: Product) {
         productImageView.image = UIImage(named: product.imageName)
         productTitleLabel.text = product.name
@@ -74,7 +88,7 @@ class ProductDetailViewController: UIViewController {
         case 0..<4:
             ingredientsCircleView.backgroundColor = .systemGreen
         case 4..<8:
-            ingredientsCircleView.backgroundColor = .systemYellow
+            ingredientsCircleView.backgroundColor = .systemOrange
         case 8..<11:
             ingredientsCircleView.backgroundColor = .systemRed
         default:
