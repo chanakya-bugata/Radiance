@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.makeKeyAndVisible()
             
             // Optional delay if needed
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 // Logic for any animation or further transition can go here
             }
         }
