@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KoR-MR-QcB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="syn-CA-dsB">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -71,7 +71,7 @@
         <!--Home View Controller-->
         <scene sceneID="zo9-j8-Obn">
             <objects>
-                <viewController id="ESZ-TB-oEb" customClass="HomeViewController" customModule="Home" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="ESZ-TB-oEb" customClass="HomeViewController" customModule="Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WRw-nw-AKF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1235,7 +1235,7 @@
         <!--On Boarding View Controller-->
         <scene sceneID="L8m-Ps-zeC">
             <objects>
-                <viewController id="syn-CA-dsB" customClass="OnBoardingViewController" customModule="Home" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoardingViewController" id="syn-CA-dsB" customClass="OnBoardingViewController" customModule="Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XqY-ip-2Td">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1422,7 +1422,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Xov-7a-oTQ">
             <objects>
-                <tabBarController id="KoR-MR-QcB" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="KoR-MR-QcB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8JH-9a-3oi"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="INl-HD-jrN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -9,6 +9,8 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
 
 
 
@@ -16,6 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray // Change the color of unselected items
         UITabBar.appearance().tintColor = UIColor(red: 242/255, green: 141/255, blue: 134/255, alpha: 1) // Change the color of selected items
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let onboardingVC = storyboard.instantiateViewController(withIdentifier: "OnBoardingViewController") as? OnBoardingViewController {
+            
+            // Set it as the root view controller
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = onboardingVC
+            window?.makeKeyAndVisible()
+            
+            // Optional delay if needed
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                // Logic for any animation or further transition can go here
+            }
+        }
+
 
         return true
     }
