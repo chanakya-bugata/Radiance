@@ -808,6 +808,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                                                             <color key="baseBackgroundColor" red="0.89411771299999998" green="0.57254904510000004" blue="0.53725492949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="shopNowButtonTapped:" destination="J71-Hw-DAu" eventType="touchUpInside" id="Zx0-38-1hY"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsk-yO-dYF">
                                                         <rect key="frame" x="24" y="505.66666666666663" width="186.66666666666666" height="24"/>

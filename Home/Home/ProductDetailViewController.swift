@@ -25,6 +25,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var noOfIngredients: UILabel!
     
     var product: Product?
+    var urlString: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,20 @@ class ProductDetailViewController: UIViewController {
             updateUI(with: product)
         }
     }
+    
+    @IBAction func shopNowButtonTapped(_ sender: UIButton) {
+        guard let product = product,
+                let url = URL(string: product.url) else {
+            print("Invalid URL")
+            return
+        }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+    }
+    
+    
     func updateUI(with product: Product) {
         productImageView.image = UIImage(named: product.imageName)
         productTitleLabel.text = product.name

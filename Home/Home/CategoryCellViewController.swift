@@ -14,6 +14,7 @@ class CategoryCellViewController: UIViewController {
     
     var categoryTitle: String? // This will hold the category title passed from the previous screen.
     var recommendedProducts: [Product] = []
+    var cleanProducts: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,15 +31,30 @@ class CategoryCellViewController: UIViewController {
         cleanCollectionView.delegate = self
         
         loadRecommendedProducts()
+        loadCleanProducts()
 
     }
+    
     
     private func loadRecommendedProducts() {
         // Assuming `allProducts` is accessible here; you may need to pass it or fetch it as needed.
 
         // Filter products based on the selected category
         if let category = categoryTitle {
-            recommendedProducts = allProducts.filter { $0.itemType.lowercased() == category.lowercased() }
+            recommendedProducts = allProducts.filter { $0.itemType.lowercased() == category.lowercased()
+            }
+        }
+
+        collectionView.reloadData()
+    }
+
+    private func loadCleanProducts() {
+        // Assuming `allProducts` is accessible here; you may need to pass it or fetch it as needed.
+
+        // Filter products based on the selected category
+        if let category = categoryTitle {
+            cleanProducts = allCleanProducts.filter { $0.itemType.lowercased() == category.lowercased()
+            }
         }
 
         collectionView.reloadData()
@@ -69,11 +85,22 @@ extension CategoryCellViewController: UICollectionViewDataSource, UICollectionVi
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedProduct = recommendedProducts[indexPath.item]
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let detailVC = storyboard.instantiateViewController(identifier: "ProductDetailViewController") as? ProductDetailViewController {
-            detailVC.product = selectedProduct
-            navigationController?.pushViewController(detailVC, animated: true)
+        if collectionView == cleanCollectionView {
+            let selectedProduct = cleanProducts[indexPath.item]
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let detailVC = storyboard.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
+                detailVC.product = selectedProduct
+                navigationController?.pushViewController(detailVC, animated: true)
+            }
+        } else {
+            let selectedProduct = recommendedProducts[indexPath.item]
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let detailVC = storyboard.instantiateViewController(identifier: "ProductDetailViewController") as? ProductDetailViewController {
+                detailVC.product = selectedProduct
+                navigationController?.pushViewController(detailVC, animated: true)
+
+            }
         }
+        
     }
 }

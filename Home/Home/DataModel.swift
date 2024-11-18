@@ -25,12 +25,13 @@ struct Product {
     let ingredients: [Ingredient]
     let benefits: String
     let numberOfReviews: Int
+    let url: String
 }
 
 // Model for Ingredients
 struct Ingredient {
     var name: String
-    var riskLevel: Int // 1 for low, 2 for medium, 3 for high
+    var riskLevel: Int
 }
 
 // Model for Reviews
@@ -116,7 +117,8 @@ var allProducts = [
         imageName: "sunscreen",
         ingredients: [Ingredient1, Ingredient2],
         benefits: "2-IN-1 PROTECTS SKIN + BOOSTS GLOW - Packed with SPF 50 PA+++, for even-toned & glowing which protects skin every day. Prevents tanning & gives skin glow.",
-        numberOfReviews: 250
+        numberOfReviews: 250,
+        url: "https://thedermaco.com/product-category/sunscreen"
     ),
     Product(
         name: "Deconstruct Serum",
@@ -127,7 +129,8 @@ var allProducts = [
         imageName: "serum2",
         ingredients: [Ingredient1,Ingredient2,Ingredient3,Ingredient4],
         benefits: "Good Benifits",
-        numberOfReviews: 200
+        numberOfReviews: 200,
+        url: "https://thedermaco.com/product-category/sunscreen"
     ),
     Product(
         name: "Cetaphil Moisturizing Cream",
@@ -138,12 +141,13 @@ var allProducts = [
         imageName: "moisturizer",
         ingredients: [Ingredient1,Ingredient3,Ingredient5],
         benefits: "Good",
-        numberOfReviews: 140
+        numberOfReviews: 140,
+        url: "https://thedermaco.com/product-category/sunscreen"
     )
 ]
 
 
-var cleanProducts = [
+var allCleanProducts = [
     Product(
         name: "The Derm Co Sunscreen SPF 50",
         type: "Sunscreen SPF 50",
@@ -151,31 +155,34 @@ var cleanProducts = [
         cost: "INR 15",
         rating: 4.5,
         imageName: "sunscreen",
-        ingredients: [],
-        benefits: "Good Benifits",
-        numberOfReviews: 250
+        ingredients: [Ingredient1, Ingredient2],
+        benefits: "2-IN-1 PROTECTS SKIN + BOOSTS GLOW - Packed with SPF 50 PA+++, for even-toned & glowing which protects skin every day. Prevents tanning & gives skin glow.",
+        numberOfReviews: 250,
+        url: "https://thedermaco.com/product-category/sunscreen"
     ),
     Product(
         name: "Deconstruct Serum",
-        type: "Serum",
+        type: "Vitamin-C Serum",
         itemType: "Serum",
         cost: "INR 25",
         rating: 4.8,
-        imageName: "serum 1",
-        ingredients: [],
+        imageName: "serum2",
+        ingredients: [Ingredient1,Ingredient2,Ingredient3,Ingredient4],
         benefits: "Good Benifits",
-        numberOfReviews: 200
+        numberOfReviews: 200,
+        url: "https://thedermaco.com/product-category/sunscreen"
     ),
     Product(
         name: "Cetaphil Moisturizing Cream",
-        type: "Cream",
+        type: "Moisturizing Cream",
         itemType: "Cream",
         cost: "INR 20",
         rating: 4.2,
         imageName: "moisturizer",
-        ingredients: [],
+        ingredients: [Ingredient1,Ingredient3,Ingredient5],
         benefits: "Good",
-        numberOfReviews: 140
+        numberOfReviews: 140,
+        url: "https://thedermaco.com/product-category/sunscreen"
     )
 ]
 
