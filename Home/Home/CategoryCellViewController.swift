@@ -38,7 +38,7 @@ class CategoryCellViewController: UIViewController {
 
         // Filter products based on the selected category
         if let category = categoryTitle {
-            recommendedProducts = allProducts.filter { $0.type.lowercased() == category.lowercased() }
+            recommendedProducts = allProducts.filter { $0.itemType.lowercased() == category.lowercased() }
         }
 
         collectionView.reloadData()

@@ -19,6 +19,10 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var starRatingView: UIView!
     @IBOutlet weak var reviewsBasedOnLabel: UILabel!
     
+    @IBOutlet weak var circleOverlay: UIView!
+    
+    
+    @IBOutlet weak var noOfIngredients: UILabel!
     
     var product: Product?
     
@@ -35,16 +39,67 @@ class ProductDetailViewController: UIViewController {
         productTypeLabel.text = product.type
         
         benefitsLabel.text = product.benefits
+        reviewsBasedOnLabel.text = "Based on \(product.numberOfReviews) reviews"
+        ratingLabel.text = "\(product.rating)"
+        
+        // Update Star rating
+        updateStarRating(rating: product.rating)
+        
+        // Update ingredients circle color based on average risk level
+        updateIngredientsCircle(ingredients: product.ingredients)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func updateIngredientsCircle(ingredients: [Ingredient]) {
+        let averageRiskLevel = ingredients.map { $0.riskLevel }.reduce(0, +) / ingredients.count
+        
+        noOfIngredients.text = "\(ingredients.count)"
+            
+        // Set the circle color based on average risk level
+        switch averageRiskLevel {
+        case 0..<4:
+            ingredientsCircleView.backgroundColor = .systemGreen
+        case 4..<8:
+            ingredientsCircleView.backgroundColor = .systemYellow
+        case 8..<11:
+            ingredientsCircleView.backgroundColor = .systemRed
+        default:
+            ingredientsCircleView.backgroundColor = .systemGray
+        }
+        
+        ingredientsCircleView.layer.cornerRadius = ingredientsCircleView.frame.height / 2
+        ingredientsCircleView.layer.masksToBounds = true
+        circleOverlay.layer.cornerRadius = circleOverlay.frame.height / 2
+        circleOverlay.layer.masksToBounds = true
+            
+//        // Update the text showing the number of ingredients
+//        ingredientListButton.setTitle("\(ingredients.count) Ingredients", for: .normal)
     }
-    */
+    
+    func updateStarRating(rating: Float) {
+        // Determine the number of filled stars
+        let filledStars = Int(rating)
+        let hasHalfStar = rating - Float(filledStars) >= 0.5
+        
+        // Create the star rating view based on filled stars
+        var starViews = [UIView]()
+        
+        for i in 0..<5 {
+        let star = UIImageView(image: UIImage(systemName: i < filledStars ? "star.fill" : (i == filledStars && hasHalfStar ? "star.leadinghalf.fill" : "star")))
+        star.tintColor = .systemYellow
+        starViews.append(star)
+    }
+                
+    // Add the star views to the starRatingView
+        starRatingView.subviews.forEach { $0.removeFromSuperview() } // Clear existing stars
+        starViews.forEach { starRatingView.addSubview($0) }
+                
+    // Layout the stars (e.g., horizontally spaced)
+        var xOffset: CGFloat = 0
+        for star in starViews {
+            star.frame = CGRect(x: 10 + xOffset, y: 0, width: 25, height: 25)
+            xOffset += 25 // Adjust spacing
+        }
+        
+    }
 
 }

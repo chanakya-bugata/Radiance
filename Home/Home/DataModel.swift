@@ -18,8 +18,9 @@ struct Category {
 struct Product {
     let name: String
     let type: String
+    let itemType: String
     let cost: String
-    let rating: Double // Average rating (e.g., 4.5)
+    let rating: Float // Average rating (e.g., 4.5)
     let imageName: String
     let ingredients: [Ingredient]
     let benefits: String
@@ -100,37 +101,42 @@ var articles = [
 
 
 var Ingredient1 = Ingredient(name: "Water", riskLevel: 1),
-    Ingredient2 = Ingredient(name: "Aloe Vera", riskLevel: 5),
-    Ingredinet3 = Ingredient(name: "Sodium", riskLevel: 7)
+    Ingredient2 = Ingredient(name: "Aloe Vera", riskLevel: 9),
+    Ingredient3 = Ingredient(name: "Sodium", riskLevel: 7),
+    Ingredient4 = Ingredient(name: "Sulfur", riskLevel: 8),
+    Ingredient5 = Ingredient(name: "Potassium", riskLevel: 3)
 
 var allProducts = [
     Product(
         name: "The Derm Co Sunscreen SPF 50",
         type: "Sunscreen SPF 50",
+        itemType: "Cream",
         cost: "INR 15",
         rating: 4.5,
         imageName: "sunscreen",
         ingredients: [Ingredient1, Ingredient2],
-        benefits: "Good Benifits",
+        benefits: "2-IN-1 PROTECTS SKIN + BOOSTS GLOW - Packed with SPF 50 PA+++, for even-toned & glowing which protects skin every day. Prevents tanning & gives skin glow.",
         numberOfReviews: 250
     ),
     Product(
         name: "Deconstruct Serum",
         type: "Serum",
+        itemType: "Serum",
         cost: "INR 25",
         rating: 4.8,
         imageName: "serum 1",
-        ingredients: [],
+        ingredients: [Ingredient1,Ingredient2,Ingredient3,Ingredient4],
         benefits: "Good Benifits",
         numberOfReviews: 200
     ),
     Product(
         name: "Cetaphil Moisturizing Cream",
         type: "Cream",
+        itemType: "Cream",
         cost: "INR 20",
         rating: 4.2,
         imageName: "moisturizer",
-        ingredients: [],
+        ingredients: [Ingredient1,Ingredient3,Ingredient5],
         benefits: "Good",
         numberOfReviews: 140
     )
@@ -141,6 +147,7 @@ var cleanProducts = [
     Product(
         name: "The Derm Co Sunscreen SPF 50",
         type: "Sunscreen SPF 50",
+        itemType: "Cream",
         cost: "INR 15",
         rating: 4.5,
         imageName: "sunscreen",
@@ -151,6 +158,7 @@ var cleanProducts = [
     Product(
         name: "Deconstruct Serum",
         type: "Serum",
+        itemType: "Serum",
         cost: "INR 25",
         rating: 4.8,
         imageName: "serum 1",
@@ -161,6 +169,7 @@ var cleanProducts = [
     Product(
         name: "Cetaphil Moisturizing Cream",
         type: "Cream",
+        itemType: "Cream",
         cost: "INR 20",
         rating: 4.2,
         imageName: "moisturizer",
