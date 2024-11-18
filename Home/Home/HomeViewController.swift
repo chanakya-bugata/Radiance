@@ -33,6 +33,13 @@ class HomeViewController: UIViewController {
         articlesCollectionView.delegate = self
     }
     
+    @IBAction func captureButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let captureVC = storyboard.instantiateViewController(withIdentifier: "CaptureViewController") as? CaptureViewController {
+            navigationController?.pushViewController(captureVC, animated: true)
+        }
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {

@@ -16,7 +16,8 @@ class IngredientListViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Set the title of the navigation bar
+        self.navigationItem.title = "Product Ingredients"
         tableView.dataSource = self
         tableView.delegate = self
 
