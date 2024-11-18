@@ -68,4 +68,12 @@ extension CategoryCellViewController: UICollectionViewDataSource, UICollectionVi
         cell.configure(with: recommendedProducts[indexPath.item])
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedProduct = recommendedProducts[indexPath.item]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(identifier: "ProductDetailViewController") as? ProductDetailViewController {
+            detailVC.product = selectedProduct
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
 }

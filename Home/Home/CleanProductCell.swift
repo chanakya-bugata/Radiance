@@ -30,7 +30,17 @@ class CleanProductCell: UICollectionViewCell {
         productNameLabel.text = product.name
         productTypeLabel.text = product.type
         costLabel.text = product.cost
-        ratingLabel.text = "⭐️ \(product.rating)"
+        // Create the star attachment and set its color to yellow
+        let starAttachment = NSTextAttachment()
+        starAttachment.image = UIImage(systemName: "star.fill")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
+            
+        // Create an attributed string with the star and product rating
+        let starString = NSMutableAttributedString(attachment: starAttachment)
+        let ratingString = NSAttributedString(string: " \(product.rating)")
+        starString.append(ratingString)
+            
+        // Set the attributed text to the rating label
+        ratingLabel.attributedText = starString
         
         productImageView.layer.cornerRadius = 12
         productImageView.clipsToBounds = true
