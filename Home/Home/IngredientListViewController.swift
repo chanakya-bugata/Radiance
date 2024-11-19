@@ -28,7 +28,7 @@ class IngredientListViewController: UIViewController, UITableViewDataSource, UIT
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! IngredientTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! ProductIngredientTableViewCell
         let ingredient = ingredients[indexPath.row]
         cell.configure(with: ingredient)
         return cell
