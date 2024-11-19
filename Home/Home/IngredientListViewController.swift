@@ -30,8 +30,7 @@ class IngredientListViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! IngredientTableViewCell
         let ingredient = ingredients[indexPath.row]
-        cell.nameLabel.text = ingredient.name
-        cell.riskLevelLabel.text = "\(ingredient.riskLevel)"
+        cell.configure(with: ingredient)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
